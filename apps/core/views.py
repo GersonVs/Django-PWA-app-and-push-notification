@@ -37,3 +37,7 @@ class SendPushNotification(View):
             return JsonResponse(status=200, data={"message": "Web push successful"})
         except TypeError:
             return JsonResponse(status=500, data={"message": "An error occurred"})
+
+
+def index(request):
+    return render(request, 'core/index.html')
